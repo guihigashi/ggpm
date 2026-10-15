@@ -23,6 +23,7 @@ func main() {
 		viper.AddConfigPath(home)
 	}
 	viper.AddConfigPath(".")
+	viper.AddConfigPath("$HOME")
 
 	if err := viper.ReadInConfig(); err != nil {
 		slog.Error("failed to read config", "err", err)
